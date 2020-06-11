@@ -1,0 +1,158 @@
+---
+section: "features"
+title: "Developer"
+sectionNav: true
+---
+
+GOV.UK PaaS gives you a straightforward way to run your cloud native
+applications in containers. The platform supports most common
+programming languages and Docker containers.
+
+Languages
+---------
+
+GOV.UK PaaS provides a consistent experience for different programming
+languages through the use of language
+[buildpacks](https://docs.cloudfoundry.org/buildpacks/).
+
+Buildpack
+
+Description
+
+Binary
+
+a [binary](https://docs.cloudfoundry.org/buildpacks/binary/index.html)
+web application
+
+Custom
+
+[a custom
+buildpack](https://docs.cloudfoundry.org/buildpacks/custom.html)
+providing a language runtime from the wider Cloud Foundry community
+
+Go
+
+apps written in the [Go programming
+language](https://docs.cloudfoundry.org/buildpacks/go/index.html)
+
+Java
+
+apps written in the [Java programming
+language](https://docs.cloudfoundry.org/buildpacks/java/index.html) or
+Java Virtual Machine languages such as Scala
+
+Nginx
+
+[a web
+server](https://docs.cloudfoundry.org/buildpacks/nginx/index.html)
+
+Nodejs
+
+apps written in the [Nodejs programming
+language](https://docs.cloudfoundry.org/buildpacks/node/index.html)
+
+PHP
+
+apps written in the [PHP programming
+language](https://docs.cloudfoundry.org/buildpacks/php/index.html)
+
+Ruby
+
+apps written in the [Ruby programming
+language](https://docs.cloudfoundry.org/buildpacks/ruby/index.html)
+
+Python
+
+apps written in the [Python programming
+language](https://docs.cloudfoundry.org/buildpacks/python/index.html)
+
+R
+
+apps written in the [R programming
+language](https://docs.cloudfoundry.org/buildpacks/r/index.html)
+
+Static
+
+a [static HTML/CSS/Javascript
+website](https://docs.cloudfoundry.org/buildpacks/staticfile/index.html)
+served by nginx. The product of site publishing tools such as
+[Jekyll](https://jekyllrb.com/), [Middleman](https://middlemanapp.com/)
+or [Hugo](https://gohugo.io/)
+
+Docker
+------
+
+GOV.UK PaaS also [supports the deployment of Docker
+images](https://docs.cloud.service.gov.uk/deploying_apps.html#deploy-a-docker-image)
+with the following caveats:
+
+-   We do not offer a Docker registry service
+-   Images must be pushed to a Docker registry such as
+    [DockerHub](https://hub.docker.com/) or [Google Container
+    Registry](https://cloud.google.com/container-registry) before they
+    can be deployed to GOV.UK PaaS. Your ability to stage and restage
+    Docker applications is tied to the availability of the registry
+    hosting the images.
+-   GOV.UK PaaS does not support Docker Compose multi-container
+    applications
+-   The maximum size of Docker image that may be staged is 4GB
+
+Backing services
+----------------
+
+GOV.UK PaaS provides a number of highly available backing services.
+Please visit [our
+marketplace](https://admin.london.cloud.service.gov.uk/marketplace) to
+view more information about these services.
+
+Service
+
+Description
+
+CDN-route
+
+Proxy traffic from a user controlled domain to an existing Cloud Foundry
+application or external URL. This allows you to bring your own domain to
+the platform and have the platform manage your TLS certificates using
+[AWS Cloudfront](https://aws.amazon.com/cloudfront/) + Letsencrypt
+
+Elasticsearch
+
+[A search engine](https://www.elastic.co/products/elasticsearch) with a
+full-text search engine, an HTTP web interface and schema-free JSON
+documents.
+
+MySQL
+
+[A relational database](https://www.mysql.com/) system
+
+Object Store
+
+Object storage using [AWS S3](https://aws.amazon.com/s3/)
+
+PostgreSQL
+
+[A relational database](https://www.postgresql.org/) system
+
+Redis
+
+[A distributed, in-memory key-value database](https://redis.io/)
+
+External services
+-----------------
+
+In addition to the service we provide, applications can connect to other
+internet hosted back-ends allowing you to integrate third party services
+and other platforms through public web APIs.
+
+Public and private networking
+-----------------------------
+
+Applications on GOV.UK PaaS typically have a route to allow [inbound
+connections via the
+internet](https://docs.cloud.service.gov.uk/deploying_apps.html#deploying-public-apps).
+
+The platform also supports [private
+applications](https://docs.cloud.service.gov.uk/deploying_apps.html#deploying-private-apps)
+(i.e. applications without a public internet route).
+
