@@ -6,7 +6,9 @@ const Header = () => {
   const headerRef = useRef(null);
 
   useEffect(() => {
-    new HeaderJS(headerRef.current).init();
+    if (typeof window !== undefined) {
+     new HeaderJS(headerRef.current).init();
+    }
   }, [headerRef]);
 
   return (
