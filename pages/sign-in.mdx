@@ -1,0 +1,48 @@
+---
+title: "Sign in to GOV.UK PaaS"
+---
+import Button from '@components/Button'
+import Router from 'next/router'
+export const handleSubmit = () => {
+  Router.push({
+    pathname: '/region',
+    query: { location: 'london' },
+  }) 
+} 
+
+<form method="POST" action="/region" onSubmit={handleSubmit}>
+  <div className="govuk-form-group">
+    <fieldset className="govuk-fieldset">
+      <legend className="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 className="govuk-fieldset__heading">
+          Choose your region
+        </h2>
+      </legend>
+      <div className="govuk-radios">
+        <div className="govuk-radios__item">
+          <input className="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="london" aria-describedby="sign-in-item-hint" />
+          <label className="govuk-label govuk-radios__label govuk-label--s" htmlFor="sign-in">
+            London
+          </label>
+          <span id="sign-in-item-hint" className="govuk-hint govuk-radios__hint">
+            Apps without a custom domain end with <code>london.cloudapps.digital</code>.
+          </span>
+        </div>
+        <div className="govuk-radios__item">
+          <input className="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="ireland" aria-describedby="sign-in-2-item-hint" />
+          <label className="govuk-label govuk-radios__label govuk-label--s" htmlFor="sign-in-2">
+            Ireland
+          </label>
+          <span id="sign-in-2-item-hint" className="govuk-hint govuk-radios__hint">
+            Apps without a custom domain end with <code>cloudapps.digital</code>.
+          </span>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  <Button element="input">Continue</Button>
+</form>
+
+## Use the Command Line
+
+If you need help accessing GOV.UK PaaS from the command-line interface, take a look at our [technical documentation](https://docs.cloud.service.gov.uk/get_started.html#set-up-the-cloud-foundry-command-line).
